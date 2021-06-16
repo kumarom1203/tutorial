@@ -1,3 +1,4 @@
+
 <style type="text/css">
 	pre{
 	border: 1px solid;
@@ -8,6 +9,12 @@
 		color: #3f51b5;
 
 	}
+  .no_border{
+      border: 0px solid;
+    padding: 13px;
+    font-size: 16px;
+  }
+  }
 </style>
 <h4>1. REVERSE A NUMBER</h4>
 
@@ -465,6 +472,45 @@ for($i=0; $i<=$num  ; $i++) {
   $first = $second;
   $second = $third;
   
+}
+</pre>
+
+
+<h4>
+  WRITE THE CODE FOR GENERATING THIS ARRAY(LOOK LIKE MULTIPLICATION TABLE)
+</h4>
+<?php
+$tmp = array( "0" => array(
+  "2*1" => 2,
+    "2*2" => 4, 
+),
+
+"1" => array(
+  "3*1" => 3,
+    "3*2" => 6, 
+)
+
+);
+
+
+echo "<pre class='no_border'>";
+print_r($tmp);
+echo "</pre>";
+
+for($i= 1; $i<=2; $i++){
+  for($j=1; $j<=2; $j++){
+      $ans[$i]["$i*$j"] = $i*$j;
+  }
+}
+echo "ANSWER <br><pre class='no_border'>";
+print_r($ans);
+echo "</pre>";
+?>
+<pre>
+for($i= 1; $i<=20; $i++){
+   for($j=1; $j<=10; $j++){
+      $ans[$i]["$i*$j"] = $i*$j;
+   }
 }
 </pre>
 
