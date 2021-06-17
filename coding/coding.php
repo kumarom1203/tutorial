@@ -590,9 +590,132 @@ echo $count;
 
 
 
+<style type="text/css">
+    pre{
+    border: 1px solid;
+    padding: 13px;
+    font-size: 20px;
+    }
+    h4{
+        color: #3f51b5;
+
+    }
+  .no_border{
+      border: 0px solid;
+    padding: 13px;
+    font-size: 16px;
+  }
+  }
+</style>
+<h4>
+14. WRITE A PROGRAM TO SORT ARRAY BY VALUE LENGTH<br>
+$array = ["hello", "hi", "water", "pop", "dgdfgdfgfgg"];
+</h4>
+
+<?php
+
+$array = ["hello", "hi", "water", "pop", "dgdfgdfgfgg"];
+/*
+usort($array, function($a, $b) {
+    return strlen($b) - strlen($a);
+});
+this is also solution 
+*/
+
+for ($i=0; $i < count($array); $i++) { 
+
+    for($j=$i+1; $j<count($array); $j++){
+        if(strlen($array[$i]) < strlen($array[$j])){
+          $tem = $array[$i];
+          $array[$i] = $array[$j];
+          $array[$j] = $tem;
+
+        }
+
+    }
+
+    
+}
+print_r($array);
+?>
+
+<pre>
+
+$array = ["hello", "hi", "water", "pop", "dgdfgdfgfgg"];
+/*
+usort($array, function($a, $b) {
+    return strlen($b) - strlen($a);
+});
+this is also solution 
+*/
+
+for ($i=0; $i < count($array); $i++) { 
+
+    for($j=$i+1; $j < count($array); $j++){
+        if(strlen($array[$i]) < strlen($array[$j])){
+          $tem = $array[$i];
+          $array[$i] = $array[$j];
+          $array[$j] = $tem;
+
+        }
+
+    }
+
+    
+}
+print_r($array);
+
+</pre>
 
 
+<h4>
+    15. 
+WRITE A PROGRAM THAT TAKES STRING AS AFRGUMENTS AND RETUEN ARRAY AS COUNT OF CHARACTER AND DIGIT<br>
+INPUT: $string = 'omkum154ar'<br>
+OUTPUT: ['digit'=>3, 'letter'=>7]
+</h4>
 
+<?php
+$string = 'omkum154ar';
+$digit = 0;
+$letter = 0;
+
+
+for ($i=0; $i < strlen($string); $i++) { 
+    
+   if(is_numeric($string[$i])){
+        $digit++;
+   }else{
+        $letter++;
+   }
+
+}
+
+$res = array('digit'=> $digit, 'letter'=>$letter);
+print_r($res);
+
+
+?>
+
+<pre>
+$string = 'omkum154ar';
+$digit = 0;
+$letter = 0;
+
+
+for ($i=0; $i < strlen($string); $i++) { 
+    
+   if(is_numeric($string[$i])){
+        $digit++;
+   }else{
+        $letter++;
+   }
+
+}
+
+$res = array('digit'=> $digit, 'letter'=>$letter);
+print_r($res);
+    </pre>
 
 
 
