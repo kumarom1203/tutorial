@@ -720,6 +720,94 @@ print_r($res);
 
 
 
+<h4>16. 
+WRITE A PROGRAM THAT TAKES STRING AS AFRGUMENTS AND RETURN COMPRESSED STRING<br>
+INPUT: $string = 'AAAFGGAACCFFG'<br>
+OUTPUT: A3FG2A2C2F2G
+</h4>
+
+<?php
+$string = 'AAAFGGAACCFFG';
+$start = '';
+$com = '';
+for ($i=0; $i < strlen($string); $i++) { 
+    $letter = 1;
+    
+    if($start !=  $string[$i]){
+
+           for ($j=$i+1; $j < strlen($string) ; $j++) { 
+        if(($string[$i] == $string[$j]) ){
+             $letter++;
+        }else{
+            break;
+        }
+        
+        
+    }
+
+       if($letter == 1 ){
+       $com = $com.''.$string[$i];
+    }else{
+         $com = $com.''.$string[$i].$letter;
+    }
+
+    }
+
+ 
+
+
+ 
+    
+  $start = $string[$i];
+}
+echo $string;
+echo "<br><br>";
+echo $com;
+
+?>
+
+<pre>
+    $string = 'AAAFGGAACCFFG';
+$start = '';
+$com = '';
+for ($i=0; $i < strlen($string); $i++) { 
+    $letter = 1;
+    
+    if($start !=  $string[$i]){
+
+           for ($j=$i+1; $j < strlen($string) ; $j++) { 
+        if(($string[$i] == $string[$j]) ){
+             $letter++;
+        }else{
+            break;
+        }
+        
+        
+    }
+
+       if($letter == 1 ){
+       $com = $com.''.$string[$i];
+    }else{
+         $com = $com.''.$string[$i].$letter;
+    }
+
+    }
+
+ 
+
+
+ 
+    
+  $start = $string[$i];
+}
+echo $string;
+
+echo $com;
+    </pre>
+
+
+
+
 
 
 
