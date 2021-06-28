@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Game Solution</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" href="../assets/css/fontawesome.all.min.css" />
+      <link rel="stylesheet" type="text/css" href="../assets/css/style_font.css" />
+      <link rel="stylesheet" href="../assets/css/custom.css" />
+      <link rel="stylesheet" href="../assets/css/master.css" />
+      <link rel="stylesheet" href="../assets/css/internal.css" />
+      <link rel="stylesheet" type="text/css" href="../assets/css/jquery.fancybox.min.css" />
+      <style type="text/css">
+         .disabledPointer{
+            pointer-events:none;
+         }
+         .displaynone{
+            display: none !important;
+         }
+         .displayblock{
+            display: block !important;
+         }
+      </style>
+        <script src="../socket.io.js"></script>
+        <script type="text/javascript" src="../assets/js/jquery.js"></script>
+        <script type="text/javascript" src="../config.js"></script>
+        <script type="text/javascript" src="js/header.js"></script>
+        <script type="text/javascript" src="../language.js"></script>
+       
+   </head>
+   <body>
+
+      <div class="header__inner" id="header">
+      
+      </div>
+
+
+
+<div class="body__inner">
+         <div class="container padding-top_mobile_half padding-bottom_mobile_quarter">
+            <div class="text text_white_1">
+               <h1>Budgeting</h1>
+            </div>
+         </div>
+         <div class="container padding-top_mobile_none">
+            <div class="split split_justify_mobile_center split_gutter">
+               <div class="split__item split__item_mobile_12 split_gutter">
+                  <table class="table table_budgeting">
+                     <thead>
+                        <tr>
+                           <th>Budget</th>
+                           <th class="line_left"></th>
+                           <th class="">Year 1</th>
+                           <th class=""></th>
+                           <!---->
+                           <th class="line_left"></th>
+                           <th class="">Year 2</th>
+                           <th class=""></th>
+                           <!---->
+                           <th class="line_left"></th>
+                           <th class="">Year 3</th>
+                           <th class=""></th>
+                           <!---->
+                           <th class="line_left"></th>
+                           <th class="">Year 4</th>
+                           <th class=""></th>
+                           <!----><!---->
+                        </tr>
+                        <tr class="thead_subline">
+                           <th></th>
+                           <th class="line_left">budgeted</th>
+                           <th class="">realized</th>
+                           <th class="">deviation</th>
+                           <!---->
+                           <th class="line_left">budgeted</th>
+                           <th class="">realized</th>
+                           <th class="">deviation</th>
+                           <!---->
+                           <th class="line_left">budgeted</th>
+                           <th class="">realized</th>
+                           <th class="">deviation</th>
+                           <!---->
+                           <th class="line_left">budgeted</th>
+                           <th class="">realized</th>
+                           <th class="">deviation</th>
+                           <!----><!---->
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>+ Net sales</td>
+                           <td class="line_left">0</td>
+                           <td class="blue">24</td>
+                           <td class="positive">+24</td>
+                           <!----><!----><!---->
+                           <td class="line_left">
+                           <div class="mat-form-field">
+                                 <input type="number" class="" value="0"></div>
+                           </td>
+                           <td class="">0</td>
+                           <td class="positive">+0</td>
+                           <!----><!----><!----><!---->
+                           <td class="line_left">0</td>
+                           <td class="blue ">0</td>
+                           <td class="positive">+0</td>
+                           <!----><!----><!---->
+                           <td class="line_left">0</td>
+                           <td class="blue">0</td>
+                           <td class="positive">+0</td>
+                           <!----><!----><!----><!---->
+                        </tr>
+                        <tr>
+                           <td>- Cost of goods sold (COGS)</td>
+                           <td class="line_left">0</td>
+                           <td class="blue">17</td>
+                           <td class="negative">+17</td>
+                           <!----><!----><!---->
+                           <td class="line_left">
+                             <div class="mat-form-field">
+                                 <input type="number" class="" value="0"></div>
+                           </td>
+                           <td class="">0</td>
+                           <td class="positive">+0</td>
+                           <!----><!----><!----><!---->
+                           <td class="line_left">0</td>
+                           <td class="blue">0</td>
+                           <td class="positive">+0</td>
+                           <!----><!----><!---->
+                           <td class="line_left">0</td>
+                           <td class="blue">0</td>
+                           <td class="positive">+0</td>
+                           <!----><!----><!----><!---->
+                        </tr>
+                        <tr class="bg_white_2">
+                           <td>= Gross profit</td>
+                           <td class="line_left">0</td>
+                           <td class="blue">7</td>
+                           <td class="positive"> +7 </td>
+                           <!---->
+                           <td class="line_left">0</td>
+                           <td class="blue">0</td>
+                           <td class="positive"> +0 </td>
+                           <!---->
+                           <td class="line_left">0</td>
+                           <td class="blue ">0</td>
+                           <td class="positive "> +0 </td>
+                           <!---->
+                           <td class="line_left">0</td>
+                           <td class="blue">0</td>
+                           <td class="positive"> +0 </td>
+                           <!----><!---->
+                        </tr>
+                        <tr>
+                           <td>- Sales expenses</td>
+                           <td class="line_left">0</td>
+                           <td class="blue">5</td>
+                           <td class="negative">+5</td>
+                           <!----><!----><!---->
+                           <td class="line_left">
+                              <div class="mat-form-field">
+                                 <input type="number" class="" value="0">
+                              </div>
+                           </td>
+                           <td class="">0</td>
+                           <td class="positive">+0</td>
+                           <!----><!----><!----><!---->
+                           <td class="line_left">0</td>
+                           <td class="blue ">0</td>
+                           <td class="positive ">+0</td>
+                           <!----><!----><!---->
+                           <td class="line_left">0</td>
+                           <td class="blue">0</td>
+                           <td class="positive">+0</td>
+                           <!----><!----><!----><!---->
+                        </tr>
+                        <tr>
+                           <td>- Marketing expenses</td>
+                           <td class="line_left">0</td>
+                           <td class="blue">2</td>
+                           <td class="negative">+2</td>
+                           <!----><!----><!---->
+                           <td class="line_left">
+                             <div class="mat-form-field">
+                                 <input type="number" class="" value="0">
+                              </div>
+                           </td>
+                           <td class="">0</td>
+                           <td class="positiv">+0</td>
+                           <!----><!----><!----><!---->
+                           <td class="line_left">0</td>
+                           <td class="blue">0</td>
+                           <td class="positive">+0</td>
+                           <!----><!----><!---->
+                           <td class="line_left">0</td>
+                           <td class="blue">0</td>
+                           <td class="positive">+0</td>
+                           <!----><!----><!----><!---->
+                        </tr>
+                        <tr>
+                           <td>- Administration &amp; IT expenses</td>
+                           <td class="line_left ">0</td>
+                           <td class="blue ">2</td>
+                           <td class="negative">+2</td>
+                           <!----><!----><!---->
+                           <td class="line_left">
+                              <div class="mat-form-field">
+                                 <input type="number" class="" value="0">
+                              </div>
+                           </td>
+                           <td class="">0</td>
+                           <td class="positive">+0</td>
+                           <!----><!----><!----><!---->
+                           <td class="line_left">0</td>
+                           <td class="blue">0</td>
+                           <td class="positive">+0</td>
+                           <!----><!----><!---->
+                           <td class="line_left">0</td>
+                           <td class="blue">0</td>
+                           <td class="positive">+0</td>
+                           <!----><!----><!----><!---->
+                        </tr>
+                        <tr>
+                           <td>- R&amp;D expenses</td>
+                           <td class="line_left">0</td>
+                           <td class="blue">4</td>
+                           <td class="negative">+4</td>
+                           <!----><!----><!---->
+                           <td class="line_left">
+                              <div class="mat-form-field">
+                                 <input type="number" class="" value="0">
+                              </div>
+                           </td>
+                           <td class="">0</td>
+                           <td class="positive">+0</td>
+                           <!----><!----><!----><!---->
+                           <td class="line_left">0</td>
+                           <td class="blue">0</td>
+                           <td class="positive">+0</td>
+                           <!----><!----><!---->
+                           <td class="line_left">0</td>
+                           <td class="blue">0</td>
+                           <td class="positive">+0</td>
+                           <!----><!----><!----><!---->
+                        </tr>
+                        <tr class="bg_white_2">
+                           <td>= Earnings before interest &amp; taxes (EBIT)</td>
+                           <td class="line_left">0</td>
+                           <td class="blue">-6</td>
+                           <td class="negative">-6</td>
+                           <!---->
+                           <td class="line_left">0</td>
+                           <td class="blue">0</td>
+                           <td class="positive">+0</td>
+                           <!---->
+                           <td class="line_left">0</td>
+                           <td class="blue">0</td>
+                           <td class="positive">+0</td>
+                           <!---->
+                           <td class="line_left">0</td>
+                           <td class="blue">0</td>
+                           <td class="positive">+0</td>
+                           <!----><!---->
+                        </tr>
+                        <tr>
+                           <td>- Interest</td>
+                           <td class="line_left">0</td>
+                           <td class="blue">4</td>
+                           <td class="negative">+4</td>
+                           <!----><!----><!---->
+                           <td class="line_left">
+                               <div class="mat-form-field">
+                                 <input type="number" class="" value="0">
+                              </div>
+                           </td>
+                           <td class="">0</td>
+                           <td class="positive">+0</td>
+                           <!----><!----><!----><!---->
+                           <td class="line_left">0</td>
+                           <td class="blue">0</td>
+                           <td class="positive">+0</td>
+                           <!----><!----><!---->
+                           <td class="line_left">0</td>
+                           <td class="blue">0</td>
+                           <td class="positive">+0</td>
+                           <!----><!----><!----><!---->
+                        </tr>
+                        <tr class="bg_white_2">
+                           <td>= Earnings before taxes (EBT)</td>
+                           <td class="line_left">0</td>
+                           <td class="blue">-10</td>
+                           <td class="negative">-10</td>
+                           <!---->
+                           <td class="line_left">0</td>
+                           <td class="blue">0</td>
+                           <td class="positive">+0</td>
+                           <!---->
+                           <td class="line_left">0</td>
+                           <td class="blue">0</td>
+                           <td class="positive">+0</td>
+                           <!---->
+                           <td class="line_left">0</td>
+                           <td class="blue">0</td>
+                           <td class="positive">+0</td>
+                           <!----><!---->
+                        </tr>
+                        <tr>
+                           <td>- Taxes (20%)</td>
+                           <td class="line_left">0</td>
+                           <td class="blue">0</td>
+                           <td class="positive">+0</td>
+                           <!----><!----><!---->
+                           <td class="line_left">
+                              <div class="mat-form-field">
+                                 <input type="number" class="" value="0">
+                              </div>
+                           </td>
+                           <td class="">0</td>
+                           <td class="positive">+0</td>
+                           <!----><!----><!----><!---->
+                           <td class="line_left">0</td>
+                           <td class="blue">0</td>
+                           <td class="positive">+0</td>
+                           <!----><!----><!---->
+                           <td class="line_left">0</td>
+                           <td class="blue">0</td>
+                           <td class="positive">+0</td>
+                           <!----><!----><!----><!---->
+                        </tr>
+                        <tr class="bg_white_2">
+                           <td>= Net income for period</td>
+                           <td class="line_left">0</td>
+                           <td class="blue">-10</td>
+                           <td class="negative">-10</td>
+                           <!---->
+                           <td class="line_left">0</td>
+                           <td class="blue">0</td>
+                           <td class="positive">+0</td>
+                           <!---->
+                           <td class="line_left">0</td>
+                           <td class="blue">0</td>
+                           <td class="positive">+0</td>
+                           <!---->
+                           <td class="line_left">0</td>
+                           <td class="blue">0</td>
+                           <td class="positive">+0</td>
+                           <!----><!---->
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+            <div class="spacer spacer_mobile_half"></div>
+            <a class="button">
+               <div class="button__icon button__icon_left">
+                  <i class="far fa-save"></i>
+               </div>Save 
+            </a>
+         </div>
+      <!---->
+   </div>
+
+
+
+
+
+    
+      <script src="../assets/js/jquery.fancybox.min.js"></script>
+      <script src="../assets/js/jquery.cookie.js"></script>
+      <script src="js/footer.js"></script>
+
+   
+
+   
+   </body>
+</html>
