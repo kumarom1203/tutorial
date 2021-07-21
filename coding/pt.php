@@ -1,28 +1,24 @@
+<?php
 
-<style type="text/css">
-	pre{
-	border: 1px solid;
-    padding: 13px;
-    font-size: 20px;
-	}
-	h4{
-		color: #3f51b5;
+$arr = [1, 2, 5, 8, 9, 11, 12, 13, 15];
+echo "Original Array [".implode(',', $arr).']';
 
-	}
-  .no_border{
-      border: 0px solid;
-    padding: 13px;
-    font-size: 16px;
+for($i=0; $i < count($arr)-1 ; $i++) {
+  
+  if($arr[$i+1] - $arr[$i] == 1){
+
+  }else{
+
+    $diff = $arr[$i+1] - $arr[$i];
+
+    for ($j=0; $j<$diff-1; $j++) { 
+
+      $missing[] = $arr[$i] + $j + 1;
+
+    }
   }
-  }
-</style>
-<h4>
-WRITE A PROGRAM THAT TAKES STRING AS AFRGUMENTS AND RETURN COMPRESSED STRING<br>
-INPUT: $string = 'AAAFGGAACCFFG'<br>
-OUTPUT: A5F3G3C2
-</h4>
 
+}
+echo "Missing Array [".implode(',', $missing).']';
 
-
-
-
+?>
